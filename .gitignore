@@ -132,8 +132,8 @@ dist
 # config files
 config.json
 
-.idea
-
 # lock files
 package-lock.json
 yarn.lock
+
+.idea
