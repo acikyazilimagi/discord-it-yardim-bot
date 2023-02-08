@@ -52,6 +52,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: discord-service
+          service: discordbot-service
           cluster: base-cluster
           wait-for-service-stability: false
