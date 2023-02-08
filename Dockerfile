@@ -1,21 +1,15 @@
-FROM node:latest
+FROM node:16-alpine
 
-# Create the bot's directory
+WORKDIR /app
 
-RUN mkdir -p /usr/src/bot
+COPY package.json yarn.lock ./
 
-WORKDIR /usr/src/bot
+RUN yarn install --frozen-lockfile
 
-COPY package.json /usr/src/bot
+COPY . .
 
-RUN npm install
+RUN apk add --no-cache bash tini
 
-COPY . /usr/src/bot
+ENTRYPOINT ["/sbin/tini", "--"]
 
-ENV ClientID_TEST=""
-ENV GuildID_TEST=""
-ENV Token_TEST=""
-
-# Start the bot.
-
-CMD ["node", "index.js"]
+CMD ["/bin/bash", "-c", "node deploy-commands.js; node index.js"]

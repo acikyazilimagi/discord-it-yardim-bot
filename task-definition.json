@@ -1,0 +1,50 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "container-name",
+      "image": "366354050833.dkr.ecr.eu-central-1.amazonaws.com/discord-ecr:latest",
+      "cpu": 512,
+      "memory": 1024,
+      "portMappings": [],
+      "essential": true,
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "secrets": [
+        {
+          "name": "TOKEN",
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:discord-bot-prod-env-MWQ2lL:TOKEN::"
+        },
+        {
+          "name": "GUILD_ID",
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:discord-bot-prod-env-MWQ2lL:GUILD_ID::"
+        },
+        {
+          "name": "CLIENT_ID",
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:discord-bot-prod-env-MWQ2lL:CLIENT_ID::"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-create-group": "true",
+          "awslogs-group": "/ecs/discordbot",
+          "awslogs-region": "eu-central-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ],
+  "family": "discordbot-TD",
+  "executionRoleArn": "arn:aws:iam::366354050833:role/ecsServiceRole",
+  "networkMode": "awsvpc",
+  "volumes": [],
+  "placementConstraints": [],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "512",
+  "memory": "1024",
+  "tags": []
+}
