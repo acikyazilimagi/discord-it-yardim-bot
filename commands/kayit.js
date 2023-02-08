@@ -15,8 +15,8 @@ module.exports = {
       await interaction.reply('Ad ve soyadınız değiştirildi.')
     } catch (error) {
       console.error(error)
-      console.log(error.rawError)
-      console.log(error.rawError.message)
+      // console.log(error.rawError)
+      // console.log(error.rawError.message)
       await interaction.reply(
         `Ad ve soyadınız değiştirilemedi. Hata: ${error.rawError.code} - ${error.rawError.message}`,
       )
