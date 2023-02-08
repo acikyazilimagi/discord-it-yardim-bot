@@ -50,12 +50,3 @@ module.exports = {
     });
   },
 };
-
-switch (key) {
-  case value:
-    
-    break;
-
-  default:
-    break;
-}
