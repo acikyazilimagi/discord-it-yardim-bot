@@ -5,7 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "discord-logs": "^2.2.1",
-    "discord.js": "^14.7.1"
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
     "eslint": "^8.33.0",
