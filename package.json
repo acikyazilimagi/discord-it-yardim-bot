@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node deploy-commands.js && node index.js",
-    "dev": "nodemon index.js",
-    "prepare": "husky install"
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "discord-logs": "^2.2.1",
@@ -14,13 +13,7 @@
     "dotenv": "^16.0.3"
   },
   "devDependencies": {
-    "eslint": "^7.32.0 || ^8.2.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.1",
-    "prettier": "^2.8.4"
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0"
   }
 }
