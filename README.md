@@ -1,8 +1,8 @@
 # discord-it-yardim-bot
 TEST ENV 
-ClientID_TEST=1072780667370356749
-GuildID_TEST=1072074800622739476
-TOKEN_TESTNDE4NTIzMzI1MzY3ODQ0ODg0.Gvj4fl.bLeZvTWL9_pBTMsvNIWBnvQ39zkpvzniqg0AhQ
+- ClientID_TEST=1072780667370356749
+- GuildID_TEST=1072074800622739476
+- TOKEN_TESTNDE4NTIzMzI1MzY3ODQ0ODg0.Gvj4fl.bLeZvTWL9_pBTMsvNIWBnvQ39zkpvzniqg0AhQ
 
 
 Bu botun amacı IT Deprem Yardım sunucusunda bulunan üyelerin sıkça sorduğu soruları hızlıca cevaplamak ve moderasyona yardımcı olma amacıyla yapılmıştır.
