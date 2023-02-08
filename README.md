@@ -8,13 +8,13 @@ Bu botun amacı IT Deprem Yardım sunucusunda bulunan üyelerin sıkça sorduğu
 Aşağıdaki seçilebilir pencereden bilgi almak istediğiniz projeyi seçebilirsiniz.
 
 Reply (Embedde değil);
-1. Depremyardim.com, afet zamanlarında hayatını kaybetmekte tehlikeye düşen insanlar için bir fırsattır. Kullanıcılar, kendileri veya yardıma ihtiyaç duyan insanların bilgilerini, siteye ekleyebilirler. Bu bilgiler, AFAD ve TSK gibi yardım kuruluşlarına doğrudan yönlendirilir ve bu şekilde afetzedelerin kurtarılmasına yardımcı olunur. Depremyardim.com, depremzedelerin erken müdahale ile hayatta kalma şansını arttırır.
+1. **Depremyardim.com** - afet zamanlarında hayatını kaybetmekte tehlikeye düşen insanlar için bir fırsattır. Kullanıcılar, kendileri veya yardıma ihtiyaç duyan insanların bilgilerini, siteye ekleyebilirler. Bu bilgiler, AFAD ve TSK gibi yardım kuruluşlarına doğrudan yönlendirilir ve bu şekilde afetzedelerin kurtarılmasına yardımcı olunur. Depremyardim.com, depremzedelerin erken müdahale ile hayatta kalma şansını arttırır.
 
-2. Beniyiyim.com - Hayat kurtaran bir adım: Beniyiyim.com. Deprem, sel gibi doğal afetler sonrası enkaz altında kalanların anlık durumlarını bildirebilmeleri veya yardım için çağrısında bulunabilmeleri için geliştirilen bir uygulamadır. Konum bilgilerinizi uygulamaya girerek afet durumunda hayatınızı veya başkalarının hayatını kurtarabilirsiniz.
+2. **Beniyiyim.com** - Hayat kurtaran bir adım: Beniyiyim.com. Deprem, sel gibi doğal afetler sonrası enkaz altında kalanların anlık durumlarını bildirebilmeleri veya yardım için çağrısında bulunabilmeleri için geliştirilen bir uygulamadır. Konum bilgilerinizi uygulamaya girerek afet durumunda hayatınızı veya başkalarının hayatını kurtarabilirsiniz.
 
-3. Afetharita.com: Afetharita.com ile afet durumlarında enkaz altındaki veya yardıma ihtiyacı olanların anlık durumlarını takip edebilir veya yardım için çağrıda bulunabilirsiniz. 
+3. **Afetharita.com** - Afetharita.com ile afet durumlarında enkaz altındaki veya yardıma ihtiyacı olanların anlık durumlarını takip edebilir veya yardım için çağrıda bulunabilirsiniz. 
 
-4. Afetbilgi.com: Deprem sonrası hayati bilgiye ihtiyaç duyduğunuzda Afetbilgi.com sizin yanınızda. Geçici barınma ve toplanma alanları, önemli telefon numaraları, bağış kanalları gibi hayati bilgilere buradan ulaşabilirsiniz.
+4. **Afetbilgi.com** - Deprem sonrası hayati bilgiye ihtiyaç duyduğunuzda Afetbilgi.com sizin yanınızda. Geçici barınma ve toplanma alanları, önemli telefon numaraları, bağış kanalları gibi hayati bilgilere buradan ulaşabilirsiniz.
 
 ___
 
