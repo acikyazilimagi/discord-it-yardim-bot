@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node deploy-commands.js && node index.js",
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "discord-logs": "^2.2.1",
     "discord.js": "^14.7.1",
