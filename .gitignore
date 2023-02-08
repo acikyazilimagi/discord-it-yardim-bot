@@ -131,3 +131,5 @@ dist
 
 # config files
 config.json
+
+.idea
