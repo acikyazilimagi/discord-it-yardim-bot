@@ -30,7 +30,7 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: telegram-ecr
+          ECR_REPOSITORY: discord-ecr
           IMAGE_TAG: ${{ github.sha }}
         run: |
           # Build a docker container and
@@ -52,6 +52,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: telegram-service
+          service: discord-service
           cluster: base-cluster
-          wait-for-service-stability: true
+          wait-for-service-stability: false

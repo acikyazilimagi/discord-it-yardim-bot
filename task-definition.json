@@ -1,73 +1,50 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:eu-central-1:366354050833:task-definition/telegrambot-TD:3",
   "containerDefinitions": [
     {
       "name": "container-name",
-      "image": "ghcr.io/go2engle/hello-world:latest",
+      "image": "366354050833.dkr.ecr.eu-central-1.amazonaws.com/discord-ecr:latest",
       "cpu": 512,
       "memory": 1024,
       "portMappings": [],
       "essential": true,
       "environment": [],
-      "environmentFiles": [
-        {
-          "value": "arn:aws:s3:::credent-bucket/discord-bot-prod.env",
-          "type": "s3"
-        }
-      ],
+      "environmentFiles": [],
       "mountPoints": [],
       "volumesFrom": [],
+      "secrets": [
+        {
+          "name": "TOKEN",
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:discord-bot-prod-env-MWQ2lL:TOKEN::"
+        },
+        {
+          "name": "GUILD_ID",
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:discord-bot-prod-env-MWQ2lL:GUILD_ID::"
+        },
+        {
+          "name": "CLIENT_ID",
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:discord-bot-prod-env-MWQ2lL:CLIENT_ID::"
+        }
+      ],
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
           "awslogs-create-group": "true",
-          "awslogs-group": "/ecs/telegrambot",
+          "awslogs-group": "/ecs/discordbot",
           "awslogs-region": "eu-central-1",
           "awslogs-stream-prefix": "ecs"
         }
       }
     }
   ],
-  "family": "telegrambot-TD",
+  "family": "discordbot-TD",
   "executionRoleArn": "arn:aws:iam::366354050833:role/ecsServiceRole",
   "networkMode": "awsvpc",
-  "revision": 3,
   "volumes": [],
-  "status": "ACTIVE",
-  "requiresAttributes": [
-    {
-      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-    },
-    {
-      "name": "ecs.capability.execution-role-awslogs"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-    },
-    {
-      "name": "ecs.capability.env-files.s3"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-    },
-    {
-      "name": "ecs.capability.task-eni"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-    }
-  ],
   "placementConstraints": [],
-  "compatibilities": [
-    "EC2",
-    "FARGATE"
-  ],
   "requiresCompatibilities": [
     "FARGATE"
   ],
   "cpu": "512",
   "memory": "1024",
-  "registeredAt": "2023-02-08T16:45:32.598Z",
-  "registeredBy": "arn:aws:iam::366354050833:user/ferhat.bostanci",
   "tags": []
 }

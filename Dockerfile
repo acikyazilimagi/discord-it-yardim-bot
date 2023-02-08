@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:16-alpine
 
 WORKDIR /app
 
@@ -8,8 +8,8 @@ RUN yarn install --frozen-lockfile
 
 COPY . .
 
-RUN apk add --no-cache tini
+RUN apk add --no-cache bash tini
 
-ENTRYPOINT [ "/sbin/tini", "--" ]
+ENTRYPOINT ["/sbin/tini", "--"]
 
-CMD ["node", "deploy-commands.js", "&&", "node", "index.js"]
+CMD ["/bin/bash", "-c", "node deploy-commands.js; node index.js"]
