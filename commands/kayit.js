@@ -12,14 +12,13 @@ module.exports = {
       const ad = interaction.options.getString('ad')
       const soyad = interaction.options.getString('soyad')
       await interaction.member.setNickname(`${ad} ${soyad}`)
-      await interaction.reply('Ad ve soyadınız değiştirildi.', { ephemeral: true })
-      await interaction.deleteReply()
+      await interaction.reply({ content: 'Ad ve soyadınız değiştirildi.', ephemeral: true })
     } catch (error) {
       console.error(error)
       // console.log(error.rawError)
       // console.log(error.rawError.message)
       await interaction.reply(
-        `Ad ve soyadınız değiştirilemedi. Hata: ${error.rawError.code} - ${error.rawError.message}`,
+        { content: `Ad ve soyadınız değiştirilemedi. Hata: ${error.rawError.code} - ${error.rawError.message}`, ephemeral: true },
       )
     }
   },
