@@ -1,14 +1,13 @@
-const { SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder } = require('discord.js')
 
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('bireysel-destek')
-    .setDescription(
-      'Bize nasıl bireysel destek verebileceğiniz hakkında bilgi içerir.'
-    ),
+    .setDescription('Bize nasıl bireysel destek verebileceğiniz hakkında bilgi içerir.'),
   async execute(interaction) {
-    await interaction.reply(
-      `Merhaba, ${interaction.user.id} eğer formu dolduysanız size ulaşabiliriz.\nŞuan insan kaynağı dolmuş durumdadır.\n[Form linki için tıklayın!](<https://app.retable.io/form/qdjgyl2NHrE5CLnA>)`
-    );
+    await interaction.reply({
+      content: `Merhaba, ${interaction.user} eğer formu dolduysanız size ulaşabiliriz.\nŞuan insan kaynağı dolmuş durumdadır.\n[Form linki için tıklayın!](<https://app.retable.io/form/qdjgyl2NHrE5CLnA>)`,
+      ephemeral: true,
+    })
   },
-};
+}
