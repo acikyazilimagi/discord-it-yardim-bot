@@ -132,5 +132,7 @@ dist
 # config files
 config.json
 
+# lock files (Yarn.lock is not included because it is used in docker)
+package-lock.json
 
 .idea
