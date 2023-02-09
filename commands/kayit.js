@@ -12,7 +12,7 @@ module.exports = {
       const ad = interaction.options.getString('ad')
       const soyad = interaction.options.getString('soyad')
       await interaction.member.setNickname(`${ad} ${soyad}`)
-      await interaction.reply('Ad ve soyadınız değiştirildi.')
+      await interaction.reply({ content: 'Ad ve soyadınız değiştirildi.', ephemeral: true })
     } catch (error) {
       console.error(error)
       // console.log(error.rawError)
