@@ -18,7 +18,7 @@ module.exports = {
       // console.log(error.rawError)
       // console.log(error.rawError.message)
       await interaction.reply(
-        { content: `Ad ve soyadınız değiştirilemedi. Hata: ${error.rawError.code} - ${error.rawError.message}`, ephemeral: true },
+        `Ad ve soyadınız değiştirilemedi. Hata: ${error.rawError.code} - ${error.rawError.message}`},
       )
     }
   },
