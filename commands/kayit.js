@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require('discord.js')
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('kayıt')
+    .setName('ztestingkayıt')
     .setDescription('Ad ve soyad değiştirmenizi sağlar.')
     .addStringOption((option) => option.setName('ad').setDescription('Adınızı giriniz.').setRequired(true))
     .addStringOption((option) => option.setName('soyad').setDescription('Soyadınızı giriniz.').setRequired(true)),
@@ -18,7 +18,7 @@ module.exports = {
       // console.log(error.rawError)
       // console.log(error.rawError.message)
       await interaction.reply(
-        `Ad ve soyadınız değiştirilemedi. Hata: ${error.rawError.code} - ${error.rawError.message}`},
+        `Ad ve soyadınız değiştirilemedi. Hata: ${error.rawError.code} - ${error.rawError.message}`,
       )
     }
   },
