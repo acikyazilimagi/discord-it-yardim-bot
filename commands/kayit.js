@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require('discord.js')
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('ztestingkayıt')
+    .setName('kayıt')
     .setDescription('Ad ve soyad değiştirmenizi sağlar.')
     .addStringOption((option) => option.setName('ad').setDescription('Adınızı giriniz.').setRequired(true))
     .addStringOption((option) => option.setName('soyad').setDescription('Soyadınızı giriniz.').setRequired(true)),
