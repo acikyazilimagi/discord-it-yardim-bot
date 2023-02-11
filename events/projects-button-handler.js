@@ -29,19 +29,19 @@ module.exports = {
    * @param interaction {import('discord.js').Interaction}
    * @description butonlarda tıklanılan siteler hakkında bilgi gönderir.
    */
-  execute(interaction) {
+  async execute(interaction) {
     if (!interaction.isButton()) return
 
     const { customId } = interaction
     const site = sites[customId]
 
     if (!site) return
-
+    await interaction.deferReply({ ephemeral: true })
     const row = new ActionRowBuilder().addComponents(
       new ButtonBuilder().setLabel('Siteye Git').setURL(site.url).setStyle(ButtonStyle.Link),
     )
 
-    interaction.reply({
+    interaction.editReply({
       content: `${interaction.user} \n**${customId}**, ${site.description}`,
       components: [row],
       ephemeral: true,
