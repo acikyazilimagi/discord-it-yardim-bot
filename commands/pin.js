@@ -6,7 +6,7 @@ module.exports = {
     .setDescription('Sabitlenmiş mesajları kontrol edilmesi hatırlatılır.'),
   async execute(interaction) {
     await interaction.reply({
-      content: `Lütfen pinli mesajları kontrol edin.`,
+      content: `Lütfen sabitlenmiş mesajları kontrol edin.`,
       ephemeral: true,
     })
   },
