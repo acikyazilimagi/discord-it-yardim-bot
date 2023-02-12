@@ -1,6 +1,9 @@
 {
     "mainAnnouncement": {
         "channelId": "1074019564096069793",
-        "interval": "1800"
+        "morningInterval": "1800",
+        "nightInterval": "3600",
+        "morningTime": "9",
+        "nightTime": "21"
     }
 }
