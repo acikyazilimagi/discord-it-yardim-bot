@@ -1,8 +1,8 @@
 ---
-name: Bug raporu
+name: Bug Raporu
 about: Bir hata bulduğunuzda lütfen burayı kullanın.
 title: "[BUG] "
-labels: ":bug: Bug"
+labels: "bug"
 assignees: ""
 ---
 

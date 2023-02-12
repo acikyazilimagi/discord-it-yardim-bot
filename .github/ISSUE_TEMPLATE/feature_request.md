@@ -2,7 +2,7 @@
 name: Yeni Özellik İsteği
 about: Botta olmasını istediğiniz bir özellik varsa burayı kullanın.
 title: "[FEAT]"
-labels: ":sparkles: feat"
+labels: "enhancement"
 assignees: ""
 ---
 
