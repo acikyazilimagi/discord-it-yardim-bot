@@ -20,7 +20,7 @@ module.exports = {
             '**[⛓ Github Repoları](https://github.com/orgs/acikkaynak/repositories)\n[⛓ Instagram](https://www.instagram.com/acikyazilimagi/)\n[⛓ Twitter](https://twitter.com/acikyazilimagi)**',
         })
         .setTimestamp()
-        .setFooter({ text: 'Her bir saatte bir otomatik paylaşılır.' })
+        .setFooter({ text: 'Her yarım saatte bir otomatik paylaşılır.' })
 
       client.channels.cache.get(mainAnnouncement.channelId).send({ embeds: [announcementEmbed] })
     }, mainAnnouncement.interval * 1000)
