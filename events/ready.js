@@ -32,7 +32,7 @@ module.exports = {
         new Date().getHours() >= mainAnnouncement.morningTime &&
         new Date().getHours() <= mainAnnouncement.nightTime
       ) {
-        if(!messages.find(msg=> msg.author.bot)){
+        if(!messages.find(msg=> msg.content == '')){
         client.channels.cache.get(mainAnnouncement.channelId).send({ embeds: [announcementEmbed] })
         }
       }
@@ -42,7 +42,7 @@ module.exports = {
     setInterval(async() => {
       let messages = await channel.messages.fetch({limit:50});
       if (new Date().getHours() < mainAnnouncement.morningTime || new Date().getHours() > mainAnnouncement.nightTime) {
-        if(!messages.find(msg=> msg.author.bot)){
+        if(!messages.find(msg=> msg.content == '')){
         client.channels.cache.get(mainAnnouncement.channelId).send({ embeds: [announcementEmbed] })
         }
       }
