@@ -20,7 +20,6 @@ module.exports = {
         value:
           '**[⛓ Github Repoları](https://github.com/orgs/acikkaynak/repositories)\n[⛓ Instagram](https://www.instagram.com/acikyazilimagi/)\n[⛓ Twitter](https://twitter.com/acikyazilimagi)\n[⛓ Linktree](https://linktr.ee/acikyazilimagi)**',
       })
-      .setTimestamp()
       .setFooter({ text: 'Bu mesaj otomatik olarak paylaşılmaktadır.' })
 
     // Morning
