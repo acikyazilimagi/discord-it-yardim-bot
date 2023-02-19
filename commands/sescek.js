@@ -15,10 +15,10 @@ module.exports = {
         if(!self.voice.channel){
             return interaction.reply({content:"sesli kanalda olmalısın",ephemeral: true});
         }
-        if(!interaction.guild.members.cache.get(id)){
+		const user = interaction.guild.members.cache.get(id);
+        if(!user){
             return interaction.reply({content:"geçerli bir kullanıcı ID'si girin",ephemeral:true});
         }
-		const user = interaction.guild.members.cache.get(id);
         if(!user.voice.channel){
             return interaction.reply({content:"sesli kanalda olmayan birisini çekemezsin",ephemeral: true});
         }
@@ -29,7 +29,11 @@ module.exports = {
             return interaction.reply({content:"aynı sesli kanalda olduğun birisini çekemezsin",ephemeral: true});
         }
 
-        user.voice.setChannel(self.voice.channel);
-        interaction.reply({content: "başarılı şekilde çekildi", ephemeral: true})
+        user.voice.setChannel(self.voice.channel).then(user=>{
+        interaction.reply({content: `${user} başarılı şekilde çekildi`, ephemeral: true})
+        }).catch(error => {
+        console.error(error)
+        interaction.reply({content: `kullanıcı çekilemedi **Hata:** ${error.rawError.code} - ${error.rawError.message}`,ephemeral: true})
+    })
 	},
 };
