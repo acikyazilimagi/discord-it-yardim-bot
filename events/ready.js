@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 const { Events, EmbedBuilder } = require('discord.js')
 const { mainAnnouncement } = require('../data/config.json')
-const { CLIENT_ID } = process.env;
 
 module.exports = {
   name: Events.ClientReady,
@@ -24,11 +23,12 @@ module.exports = {
       .setFooter({ text: 'Bu mesaj otomatik olarak paylaşılmaktadır.' })
 
       const channel = client.channels.cache.get(mainAnnouncement.channelId);
+      const embedTitle = announcementEmbed.data.title;
       let oldMessage;
       
       channel.messages.fetch({limit:50}).then(async messages => { // Bot çevrimdışı dan çevrimiçi olduğunda son 50 mesajda botun duyuru mesajı olup olmadığını kontrol etmek için.
        let botMessage = await messages.find(msg => {
-          if(msg.content == '' && msg.author.id === CLIENT_ID && channel.id === msg.channelId){
+          if(msg.embeds[0] && msg.embeds[0].title === embedTitle){
             return msg;
           }
         });
