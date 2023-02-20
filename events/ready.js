@@ -22,24 +22,45 @@ module.exports = {
       })
       .setFooter({ text: 'Bu mesaj otomatik olarak paylaşılmaktadır.' })
 
+      const channel = client.channels.cache.get(mainAnnouncement.channelId);
+      const embedTitle = announcementEmbed.data.title;
+      let oldMessage;
+      
+      channel.messages.fetch({limit:50}).then(async messages => { // Bot çevrimdışı dan çevrimiçi olduğunda son 50 mesajda botun duyuru mesajı olup olmadığını kontrol etmek için.
+       let botMessage = await messages.find(msg => {
+          if(msg.embeds[0] && msg.embeds[0].title === embedTitle){
+            return msg;
+          }
+        });
+        oldMessage = botMessage;
+      })
+      
     // Morning
-    setInterval(() => {
+    setInterval(async() => {
       // if time is not between 9am and 9pm
+      let messages = await channel.messages.fetch({limit:50});
+
       if (
         new Date().getHours() >= mainAnnouncement.morningTime &&
         new Date().getHours() <= mainAnnouncement.nightTime
       ) {
-        client.channels.cache.get(mainAnnouncement.channelId).send({ embeds: [announcementEmbed] })
+        if(!messages.find(msg=> msg === oldMessage)){
+       oldMessage = await client.channels.cache.get(mainAnnouncement.channelId).send({ embeds: [announcementEmbed] });
+        }
       }
     }, mainAnnouncement.morningInterval * 1000)
 
     // Night
-    setInterval(() => {
+    setInterval(async() => {
+      let messages = await channel.messages.fetch({limit:50});
       if (new Date().getHours() < mainAnnouncement.morningTime || new Date().getHours() > mainAnnouncement.nightTime) {
-        client.channels.cache.get(mainAnnouncement.channelId).send({ embeds: [announcementEmbed] })
+        if(!messages.find(msg=> msg === oldMessage)){
+          oldMessage = await client.channels.cache.get(mainAnnouncement.channelId).send({ embeds: [announcementEmbed] })
+        }
       }
     }, mainAnnouncement.nightInterval * 1000)
     // SAAT BAŞI HATIRLATMA
     // An interval which will be executed every 1 hour if the time is morning (6:00 - 21:00)
+    
   },
 }
