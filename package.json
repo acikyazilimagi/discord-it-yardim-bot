@@ -9,10 +9,12 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    
     "discord-logs": "^2.2.1",
     "discord.js": "^14.7.1",
     "dotenv": "^16.0.3",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "translatte": "^3.0.1"
   },
   "devDependencies": {
     "eslint": "^7.32.0 || ^8.2.0",
